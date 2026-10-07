@@ -3,8 +3,8 @@
   "private": true,
   "description": "Repo tooling only; skills have no runtime dependencies.",
   "scripts": {
-    "validate": "node scripts/validate-skills.js && node scripts/validate-manifests.js",
-    "test": "node --test scripts/lib/skill-lint-test.js"
+    "validate": "node skills/writing-agent-skills/scripts/validate.js skills && node scripts/validate-manifests.js",
+    "test": "node --test scripts/validate-test.js scripts/check-triggers-test.js"
   },
   "engines": {
     "node": ">=20"

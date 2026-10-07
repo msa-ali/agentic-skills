@@ -44,16 +44,15 @@ For other agents, copy it into whatever directory that agent loads skills from.
 
 | Skill | What it does |
 |---|---|
-| _None yet._ | |
+| [writing-agent-skills](skills/writing-agent-skills/SKILL.md) | Writes, reviews and improves skills: finds what the agent gets wrong, writes a description that triggers reliably, keeps the body lean, then validates and tests triggering. |
 
 ## Repository layout
 
 ```
-skills/<name>/SKILL.md        the skills (the only thing users install)
-templates/SKILL.template.md   starting point for a new skill
-docs/skill-anatomy.md         the format every skill follows
-scripts/                      validators run in CI
-.claude-plugin/               Claude Code plugin + marketplace manifests
+skills/<name>/SKILL.md          the skills (the only thing users install)
+evals/<name>/                   trigger test queries for each skill
+scripts/                        repo checks run in CI
+.claude-plugin/                 Claude Code plugin + marketplace manifests
 ```
 
 ## Contributing

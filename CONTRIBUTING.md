@@ -7,31 +7,21 @@ This file is the single rulebook for changes to this repo. Other docs link here 
 1. **Search the catalog.** Check the table in the README and the `skills/` directory. If an existing skill covers part of your idea, extend it instead of adding a near-duplicate.
 2. **Check open issues and PRs** for the same topic.
 3. **Name the failure.** Describe a concrete thing an agent gets wrong without the skill. "Agents should know about X" isn't enough; skills are processes, not reference docs.
-4. **Read [docs/skill-anatomy.md](docs/skill-anatomy.md)** and confirm the idea fits.
 
 Larger ideas can start as a [skill proposal issue](.github/ISSUE_TEMPLATE/skill-proposal.yml).
 
-## Adding a skill
+## Writing or improving a skill
 
-1. Copy `templates/SKILL.template.md` to `skills/<kebab-case-name>/SKILL.md` (the template is deliberately not named `SKILL.md`, so installers don't mistake it for a real skill).
-2. Fill in the frontmatter. `name` must match the directory, and `description` must say what the skill does and include a `Use when` clause.
-3. Write the body following [docs/skill-anatomy.md](docs/skill-anatomy.md).
-4. Keep it self-contained: put supporting files inside the skill's own directory and link only to them.
-5. Add a row to the Skills table in the README.
-6. Run the checks:
+Use the [`writing-agent-skills`](skills/writing-agent-skills/SKILL.md) skill. It is the single source for how skills in this repo are written, validated and tested; this file covers only what is specific to the repo.
 
-   ```bash
-   npm test && npm run validate
-   ```
+## Repo conventions
 
-7. Try the skill in a real session. Check that it activates on the prompts you expect and stays quiet on nearby ones.
-
-## Quality bar
-
-- **Specific:** concrete steps, commands and thresholds.
-- **Verifiable:** exit criteria an agent can prove with evidence.
-- **Minimal:** every section changes agent behaviour, or it's cut.
-- **Model-neutral:** no steps that only make sense for one model or one tool's private API.
+- **Location:** `skills/<name>/SKILL.md`, with the name in -ing form (`reviewing-migrations`).
+- **Self-contained:** a skill links only to files inside its own folder, so it can be copied or installed on its own.
+- **No stray `SKILL.md`:** skill installers pick up any file with that name, so templates and examples use other filenames.
+- **Trigger queries:** each skill has `evals/<name>/trigger-queries.json` (about 20 queries, tagged `train` or `validation`). It lives outside the skill folder so installs stay lean. Run it with the skill's `scripts/check-triggers.sh`.
+- **README:** add, rename or remove the skill's row in the Skills table.
+- **Checks:** `npm test && npm run validate` must pass. CI runs both on Linux, macOS and Windows.
 
 ## Releasing
 

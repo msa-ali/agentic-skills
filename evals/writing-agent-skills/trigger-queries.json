@@ -1,0 +1,22 @@
+[
+  {"query": "I keep telling you the same three things every time we touch the billing service (use the ledger helper, never float math, run make reconcile after). Can we turn that into a skill so I stop repeating myself?", "should_trigger": true, "set": "train"},
+  {"query": "create a skill for reviewing terraform plans before apply", "should_trigger": true, "set": "train"},
+  {"query": "my deploy-checklist skill never triggers unless I type its name. here's the SKILL.md, what's wrong with it?", "should_trigger": true, "set": "train"},
+  {"query": "Tighten up skills/pdf-forms/SKILL.md, it's 900 lines and the agent keeps wandering through irrelevant sections", "should_trigger": true, "set": "train"},
+  {"query": "we have a runbook in docs/oncall/db-failover.md. package it so the agent can follow it on its own when someone says the primary is down", "should_trigger": true, "set": "train"},
+  {"query": "the agent loads our api-design skill but ignores the pagination rule in it every single time. fix the skill", "should_trigger": true, "set": "train"},
+  {"query": "write a SKILL.md for generating release notes from merged PRs", "should_trigger": true, "set": "validation"},
+  {"query": "Review this skill I wrote before I publish it to our team repo: skills/sql-style/SKILL.md", "should_trigger": true, "set": "validation"},
+  {"query": "our code-review skill fires when people just ask for a commit message. how do I stop that", "should_trigger": true, "set": "validation"},
+  {"query": "I want claude to always follow our incident postmortem format. make it something reusable we can share across repos", "should_trigger": true, "set": "validation"},
+  {"query": "Add a rule to CLAUDE.md that we use pnpm, not npm", "should_trigger": false, "set": "train"},
+  {"query": "install the vercel web-design skills into this project", "should_trigger": false, "set": "train"},
+  {"query": "update AGENTS.md so agents run the linter before committing", "should_trigger": false, "set": "train"},
+  {"query": "write a system prompt for our customer-support chatbot that runs on the API", "should_trigger": false, "set": "train"},
+  {"query": "use the pdf skill to pull the tables out of invoices/march.pdf", "should_trigger": false, "set": "train"},
+  {"query": "set up a hook that runs prettier after every file edit", "should_trigger": false, "set": "train"},
+  {"query": "write a README for this repo explaining how to install the skills", "should_trigger": false, "set": "validation"},
+  {"query": "build an MCP server that exposes our Jira tickets as tools", "should_trigger": false, "set": "validation"},
+  {"query": "which of my installed skills handles database migrations?", "should_trigger": false, "set": "validation"},
+  {"query": "bump the plugin version to 0.2.0 in both manifests", "should_trigger": false, "set": "validation"}
+]
