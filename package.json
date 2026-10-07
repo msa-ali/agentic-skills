@@ -1,0 +1,12 @@
+{
+  "name": "agentic-skills",
+  "private": true,
+  "description": "Repo tooling only; skills have no runtime dependencies.",
+  "scripts": {
+    "validate": "node scripts/validate-skills.js && node scripts/validate-manifests.js",
+    "test": "node --test scripts/lib/skill-lint-test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,32 @@
+name: Skill proposal
+description: Propose a new skill or a change to an existing one
+labels: [skill-proposal]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Skill name (kebab-case)
+      placeholder: e.g. write-release-notes
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What does an agent get wrong without this skill?
+      description: A concrete example of the failure, ideally from a real session.
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Trigger prompts
+      description: Three or more things a user would say that should activate it, and one or two that should not.
+    validations:
+      required: true
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Overlap check
+      description: Which existing skills did you check, and why isn't extending one of them enough?
+    validations:
+      required: true

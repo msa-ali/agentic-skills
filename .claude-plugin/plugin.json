@@ -1,0 +1,13 @@
+{
+  "name": "agentic-skills",
+  "version": "0.1.0",
+  "description": "Reusable, self-contained skills for AI coding agents.",
+  "author": {
+    "name": "msa-ali",
+    "url": "https://github.com/msa-ali"
+  },
+  "homepage": "https://github.com/msa-ali/agentic-skills",
+  "repository": "https://github.com/msa-ali/agentic-skills",
+  "license": "MIT",
+  "skills": "./skills"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "msa-ali-skills",
+  "description": "Reusable, self-contained skills for AI coding agents.",
+  "owner": {
+    "name": "msa-ali",
+    "url": "https://github.com/msa-ali"
+  },
+  "plugins": [
+    {
+      "name": "agentic-skills",
+      "version": "0.1.0",
+      "source": "./",
+      "description": "Reusable, self-contained skills for AI coding agents.",
+      "homepage": "https://github.com/msa-ali/agentic-skills",
+      "license": "MIT",
+      "keywords": ["skills", "agents", "claude-code"]
+    }
+  ]
+}
